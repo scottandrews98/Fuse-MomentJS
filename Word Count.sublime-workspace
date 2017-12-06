@@ -1,0 +1,374 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Ja",
+				"JavaScript\t"
+			],
+			[
+				"b",
+				"BottomLeft\t"
+			],
+			[
+				"c",
+				"Clicked\t"
+			],
+			[
+				"fo",
+				"Font\t"
+			],
+			[
+				"Sta",
+				"StatusBarBackground\t"
+			],
+			[
+				"pl",
+				"PlaceholderText\t"
+			],
+			[
+				"tex",
+				"TextInput\t"
+			],
+			[
+				"v",
+				"Value\t"
+			],
+			[
+				"I",
+				"Items\t"
+			],
+			[
+				"page",
+				"PageControl\t"
+			],
+			[
+				"B",
+				"BottomCenter\t"
+			],
+			[
+				"d",
+				"Duration\t"
+			],
+			[
+				"X",
+				"XY\t"
+			],
+			[
+				"a",
+				"Alignment\t"
+			],
+			[
+				"Fo",
+				"FontSize\t"
+			],
+			[
+				"pa",
+				"PageIndicator\t"
+			],
+			[
+				"jav",
+				"JavaScript\t"
+			],
+			[
+				"J",
+				"JavaScript\t"
+			],
+			[
+				"re",
+				"Rectangle\t"
+			],
+			[
+				"te",
+				"Text\t"
+			],
+			[
+				"L",
+				"LocalBounds\t"
+			],
+			[
+				"stat",
+				"StatusBarBackground\t"
+			],
+			[
+				"co",
+				"Color\t"
+			],
+			[
+				"Te",
+				"Text\t"
+			],
+			[
+				"al",
+				"AllowedScrollDirections\t"
+			],
+			[
+				"Scr",
+				"ScrollView\t"
+			],
+			[
+				"scro",
+				"ScrollView\t"
+			],
+			[
+				"map",
+				"MapMarker\t"
+			],
+			[
+				"navig",
+				"NavigateTo\t"
+			],
+			[
+				"Na",
+				"NavigateTo\t"
+			],
+			[
+				"mi",
+				"MinHeight\t"
+			],
+			[
+				"ba",
+				"Background\t"
+			],
+			[
+				"pag",
+				"PageControl\t"
+			],
+			[
+				"be",
+				"DefaultSwitchBehavior\t"
+			],
+			[
+				"tr",
+				"Transition\t"
+			],
+			[
+				"sc",
+				"ScrollView\t"
+			],
+			[
+				"fon",
+				"FontSize\t"
+			],
+			[
+				"it",
+				"ItemSpacing\t"
+			],
+			[
+				"w",
+				"TextWrapping\t"
+			],
+			[
+				"na",
+				"NavigateTo\t"
+			],
+			[
+				"col",
+				"ColumnCount\t"
+			],
+			[
+				"row",
+				"RowCount\t"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 187.0,
+		"last_filter": "inst",
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/amsys/Desktop/Map/MainView.ux",
+		"/Users/amsys/Desktop/Map/firebase.js",
+		"/Users/amsys/OneDrive - University of Worcester/Application Development/Example Fuse Projects/To Do List/Pages/HomePage.ux",
+		"/Users/amsys/OneDrive - University of Worcester/Application Development/Example Fuse Projects/To Do List/Pages/Introduction.ux",
+		"/Users/amsys/OneDrive - University of Worcester/Application Development/Example Fuse Projects/To Do List/MainView.ux",
+		"/Users/amsys/Desktop/Baloon.png",
+		"/Users/amsys/Downloads/pt-sans/PTC55F.ttf",
+		"/Users/amsys/OneDrive - University of Worcester/Application Development/Example Fuse Projects/Football Coach Assistant/MainView.ux",
+		"/Users/amsys/OneDrive - University of Worcester/Application Development/Example Fuse Projects/Football Coach Assistant /MainView.ux",
+		"/Users/amsys/Downloads/welcome-animation/MainView.ux",
+		"/Users/amsys/Downloads/sports-car.svg",
+		"/Users/amsys/OneDrive - University of Worcester/Application Development/Example Fuse Projects/To Do List/Pages/LoginPage.ux",
+		"/Users/amsys/OneDrive - University of Worcester/Application Development/Example Fuse Projects/Example UX files/timer observable.ux",
+		"/Users/amsys/OneDrive - University of Worcester/Application Development/Example UX files/timer:observable.ux",
+		"/Users/amsys/Desktop/DB Fitness 6/member-5.html",
+		"/Users/amsys/Desktop/DB Fitness 6/member-4.html",
+		"/Users/amsys/Desktop/DB Fitness 6/member-3.html",
+		"/Users/amsys/Desktop/DB Fitness 6/member-2.html",
+		"/Users/amsys/Desktop/DB Fitness 6/member-1.html",
+		"/Users/amsys/Desktop/DB Fitness 5/member-1.html",
+		"/Users/amsys/Downloads/view.php.html",
+		"/Users/amsys/Documents/Website Stuff/Current Websites/Fitfactor/3rd/index.html",
+		"/Users/amsys/Desktop/DB Fitness  4/member-1.html",
+		"/Users/amsys/Desktop/DB Fitness 3/member-1.html",
+		"/Users/amsys/Documents/Website Stuff/Current Websites/Fitfactor/3rd/members-area.html",
+		"/Users/amsys/Desktop/DB Fitness 2/member-1.html",
+		"/Users/amsys/Documents/Website Stuff/Current Websites/DB Fitness 19/index.html",
+		"/Users/amsys/Desktop/DB Fitness/member-1.html",
+		"/Users/amsys/Desktop/DB Fitness/index.html",
+		"/Users/amsys/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/amsys/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/amsys/Library/Application Support/Sublime Text 3/Packages/Fuse/Fuse.sublime-settings",
+		"/Users/amsys/Downloads/pages-using-js/MainView.ux"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 65.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.FuseBuildResults":
+	{
+		"height": 112.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Word Count.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 135.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

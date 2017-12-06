@@ -1,0 +1,200 @@
+<App>
+	<iOS.StatusBarConfig Style="Light" />
+	<DockPanel>
+		<StatusBarBackground Dock="Top" Background="Black" />
+
+		<JavaScript>
+		var Observable = require("FuseJS/Observable");
+		var moment = require('moment.js');
+		var Timer = require("FuseJS/Timer");
+		var Storage = require("FuseJS/Storage");
+
+		var WordCount = Observable(0);
+
+		var mainTime = Observable("");
+
+		var WordSet = Observable(0);
+
+		var add;
+		var addTwo;
+
+		WordCount.value = Storage.readSync("word.json");
+		if(WordCount.value) {
+        	var bob = Storage.readSync("date.json");
+        	var add = JSON.parse(bob);
+        	Timing();
+        	router.goto("main");
+    	}else {
+    		console.log("nothing");
+        	var WordCount = Observable(0);
+        	var mainTime = Observable("");
+    	};
+
+
+		function set() {
+			router.goto("main");
+			add = moment().add('Day', 1);
+			//add = moment().add('Minute', 0.3);
+			addTwo = add.format('Do ,h:mm:ss');
+			Storage.write("word.json", JSON.stringify(WordCount.value));
+			Storage.write("date.json", JSON.stringify(add));
+
+			Timing();
+		}
+
+		function Timing() {
+			var timer = Timer.create(function() {
+    		
+	    		var Time = moment().format('Do ,h:mm:ss');
+	    		
+	    		var hours = moment().diff(add, 'hours');
+	    		var minutes = moment().diff(add, 'minutes');
+	    		var seconds = moment().diff(add, 'seconds');
+	   			
+	   			var minites2 = minutes % 60;
+	   			var seconds2 = seconds % 60;
+
+	   			if (hours >= 0 && minites2 >= 0 && seconds2 >= 0) {
+	   				Timer.delete(timer);
+	   				NewGoal();
+	   			}
+
+	   			var hours = Math.abs(hours);
+	   			var minites2 = Math.abs(minites2);
+	   			var seconds2 = Math.abs(seconds2);
+
+	   			mainTime.value = String(hours) + ":" + String(minites2) + ":" + String(seconds2);
+
+			}, 1000, true);
+		}
+
+		function addition() {
+			WordCount.value = WordCount.value + 10;
+		}
+
+		function minus() {
+			WordCount.value = WordCount.value - 10;
+			if (WordCount.value <= 0) {
+				WordCount.value = 0;
+			}
+		}
+
+		function addition2() {
+			WordSet.value = WordSet.value + 10;
+		}
+
+		function minus2() {
+			WordSet.value = WordSet.value - 10;
+			if (WordSet.value <= 0) {
+				WordSet.value = 0;
+			}
+		}
+
+		function NewGoal() {
+			var deleteTarget = Storage.deleteSync("word.json");
+			var deleteDate = Storage.deleteSync("date.json");
+			WordCount.value = 0;
+			mainTime.value = "";
+			router.goto("select");
+		}
+
+		function WordsDone() {
+			WordCount.value = WordCount.value - WordSet.value; 
+			Storage.write("word.json", JSON.stringify(WordCount.value));
+			WordSet.value = 0;
+		}
+
+		module.exports = {
+				set:set,
+				addition:addition,
+				WordCount:WordCount,
+				minus:minus,
+				mainTime:mainTime,
+				NewGoal:NewGoal,
+				WordSet:WordSet,
+				addition2:addition2,
+				minus2:minus2,
+				WordsDone:WordsDone,
+			};
+
+		</JavaScript>
+
+		<Router ux:Name="router" />
+
+		<PageControl Interaction="None" Transition="None">
+			<Panel ux:Name="select" Background="Black">
+				<DockPanel>
+					<Panel Background="Black" Height="60" Dock="Top" ux:Class="Header">
+						<Text TextAlignment="Center" TextColor="#fff" FontSize="30" Margin="20">Word Count</Text>
+					</Panel>
+					<Header />	
+
+					<Image File="plus.png" Width="40" Height="40" Alignment="Left" Margin="20,70,0,0" Clicked="{addition}" />
+
+					<Text TextAlignment="Center" Alignment="Center" Color="White" Margin="0,70,0,0" FontSize="60" Value="{WordCount}"></Text>
+
+					<Image File="minus.png" Width="40" Height="40" Alignment="Right" Margin="0,70,20,0" Clicked="{minus}" />
+
+					<Button Dock="Bottom" Margin="100" Height="60" Width="180" Background="Green" Clicked="{set}">
+						<Text Alignment="Center" Color="Black" FontSize="20">Set Goal</Text>
+					</Button>
+					
+				</DockPanel>	
+
+			</Panel>
+			
+			<Panel ux:Name="main">
+
+				<DockPanel>
+					<Header />
+				</DockPanel>
+						 
+				<StackPanel>
+					<Text Value="{WordCount}" Color="Black" Alignment="Center" Margin="0,80,0,0" FontSize="80"></Text>
+
+					<Panel Width="100%" Height="120" Background="Black" Margin="0,50,0,0">
+						<Image File="plus.png" Width="40" Height="40" Alignment="Left" Margin="20,0,0,0" Clicked="{addition2}" />
+						<Text Value="{WordSet}" Color="White" Alignment="Center" FontSize="40"></Text>
+						<Image File="minus.png" Width="40" Height="40" Alignment="Right" Margin="0,0,20,0" Clicked="{minus2}" />
+					</Panel>
+
+					<Button Clicked="{WordsDone}" Margin="0,40,0,0" Height="40" Width="80%" Background="Green">
+						<Text Alignment="Center" Color="Black" FontSize="20" >Deduct Words</Text>
+					</Button>
+
+					<Button Clicked="{NewGoal}" Margin="0,40,0,0" Height="40" Width="80%" Background="Green">
+						<Text Alignment="Center" Color="Black" FontSize="20" >Reset Goal</Text>
+					</Button>
+				</StackPanel>
+
+				<DockPanel>
+					<Panel Background="Black" Height="60" Dock="Bottom">
+						<Text Value="{mainTime}" Color="White" Alignment="Center" FontSize="40" Dock="Bottom"></Text>
+					</Panel>
+				</DockPanel>
+			</Panel>	
+
+			<Panel ux:Name="complete">
+
+				<DockPanel>
+					<Header />
+				</DockPanel>
+						 
+				<StackPanel>
+					<Text Value="{WordCount}" Color="Black" Alignment="Center" Margin="0,200,0,0" FontSize="80"></Text>
+					<Button Clicked="{NewGoal}" Margin="0,200,0,0" Height="60" Width="180" Background="Green">
+						<Text Alignment="Center" Color="Black" FontSize="20" >Reset Goal</Text>
+					</Button>
+				</StackPanel>
+
+				<DockPanel>
+					<Panel Background="Black" Height="60" Dock="Bottom">
+						<Text Value="{mainTime}" Color="White" Alignment="Center" FontSize="40" Dock="Bottom"></Text>
+					</Panel>
+				</DockPanel>
+			</Panel>	
+
+		</PageControl>	
+	</DockPanel>
+	<!-- https://www.fusetools.com/community/forums/howto_discussions/moment-timezone_js_library -->
+</App>
